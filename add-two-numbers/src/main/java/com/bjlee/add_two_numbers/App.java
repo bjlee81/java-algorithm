@@ -1,4 +1,4 @@
-package com.bjlee.two_sum.add_two_numbers;
+package com.bjlee.add_two_numbers;
 
 import lombok.extern.slf4j.Slf4j;
 
