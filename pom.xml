@@ -25,7 +25,7 @@
     <modules>
         <module>two-sum</module>
         <module>add-two-numbers</module>
-        <module>bit-gap</module>
+        <module>binary-gap</module>
     </modules>
 
     <dependencyManagement>
