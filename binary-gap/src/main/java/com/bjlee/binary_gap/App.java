@@ -5,7 +5,6 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class App {
     public static void main(String[] args) {
-        App app = new App();
         int n = 2147483647;
         log.info("number : {}, max binary gap : {}", n, solution(2147483647));
 

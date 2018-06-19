@@ -26,6 +26,7 @@
         <module>two-sum</module>
         <module>add-two-numbers</module>
         <module>binary-gap</module>
+        <module>longest-substring</module>
     </modules>
 
     <dependencyManagement>
