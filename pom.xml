@@ -27,6 +27,7 @@
         <module>add-two-numbers</module>
         <module>binary-gap</module>
         <module>longest-substring</module>
+        <module>median-of-two-sorted-arrays</module>
     </modules>
 
     <dependencyManagement>
