@@ -5,30 +5,46 @@ public class App {
     public static void main(String[] args) {
         App app = new App();
 
-        // abcabcbb
-        String input = "abcabcbb";
+        String input = "au";
 
         int len = new Solution().lengthOfLongestSubstring(input);
-        System.out.println(len);
+        System.out.println("length : " + len);
     }
 }
 
 class Solution {
+    /*
+     * 같은 문자의 반복없이 가장 긴 문자열 찾기
+     */
     public int lengthOfLongestSubstring(String s) {
-        int max = s.length();
-        String maxStr = null;
-        char[] sArray = s.toCharArray();
-        String longStr = String.valueOf(sArray[0]);
-        StringBuilder stringBuilder = new StringBuilder(longStr);
-        for (int i = 1; i < s.length(); i++) {
-            // substring 값이 s에 있으면 max str으로 저장
-            char curChar = s.charAt(i);
-            if (longStr. == curChar) {
-                continue;
-            }
-
-            stringBuilder.append(curChar);
+        if (s.length() == 1) {
+            return 1;
         }
-        return 0;
+
+        // 같은 문자 확인, 같으면 length 는 1로 변경
+        // 다음 문자열
+        String subStr = "";
+
+        int count = 0;
+        int len;
+        char[] chars = s.toCharArray();
+        for (int i = 0; i < chars.length; i++) {
+            char curChar = chars[i];
+            // 문자열이 있으면 전체 문자열에서 반복되는 문자열이 있는지 찾는다.
+            int idx = subStr.indexOf(curChar);
+            if (idx > -1) {
+                len = subStr.length();
+                if (len > count) {
+                    count = len;
+                }
+
+                // 같은 문자 나오면 저장
+                // idx 만큼 이동저장
+                subStr = subStr.substring(idx + 1, len);
+            }
+            subStr = subStr.concat(String.valueOf(curChar));
+        }
+
+        return subStr.length() > count ? subStr.length() : count;
     }
 }
