@@ -28,6 +28,7 @@
         <module>binary-gap</module>
         <module>longest-substring</module>
         <module>median-of-two-sorted-arrays</module>
+        <module>sort</module>
     </modules>
 
     <dependencyManagement>
