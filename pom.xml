@@ -29,6 +29,7 @@
         <module>longest-substring</module>
         <module>median-of-two-sorted-arrays</module>
         <module>sort</module>
+        <module>dijkstra</module>
     </modules>
 
     <dependencyManagement>

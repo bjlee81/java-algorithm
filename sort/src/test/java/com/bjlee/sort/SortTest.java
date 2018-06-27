@@ -7,8 +7,6 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 @DisplayName("A sortTest")
 class SortTest {
     int[] arr;
@@ -31,7 +29,9 @@ class SortTest {
     }
 
     @Test
+    @DisplayName("삽입 정렬 - O(n2)")
     void insertionSort() {
+        sort.insertionSort(arr);
     }
 
     @Test
