@@ -11,5 +11,14 @@
 
     <artifactId>median-of-two-sorted-arrays</artifactId>
 
+    <!--다른 모듈의 의존성 추가-->
+    <dependencies>
+        <dependency>
+            <groupId>com.bjlee</groupId>
+            <artifactId>sort</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
 
 </project>
