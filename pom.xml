@@ -30,6 +30,9 @@
         <module>median-of-two-sorted-arrays</module>
         <module>sort</module>
         <module>dijkstra</module>
+        <module>loop-sum</module>
+        <module>zero-move-right</module>
+        <module>longest-palindromic-substring</module>
     </modules>
 
     <dependencyManagement>

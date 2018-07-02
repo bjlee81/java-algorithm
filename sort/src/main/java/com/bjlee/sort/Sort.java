@@ -30,7 +30,7 @@ public class Sort {
         // pivot 좌측에서 pivot 보다 큰 값을 찾는다 - while
         // pivot 우측에서 pivot 보다 작은 값을 찾는다. - while
         // 두 값을 교환한다.
-        pivot = arr[(left + right) / 2];
+        pivot = arr[(left + right) >>> 1];
         while (i <= j) {
             while (arr[i] < pivot) {
                 i++;

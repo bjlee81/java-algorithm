@@ -6,12 +6,12 @@ public class App {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        int[] nums1 = new int[]{1, 3, 5, 4, 8, 12};
-        int[] nums2 = new int[]{2, 7, 6, 10, 11, 9};
+        int[] nums1 = new int[]{1, 1};
+        int[] nums2 = new int[]{1, 1};
         Sort sort = new Sort();
-        sort.insertionSort(nums1);
-        sort.insertionSort(nums2);
-        solution.findMedianSortedArrays(nums1, nums2);
+//        sort.insertionSort(nums1);
+//        sort.insertionSort(nums2);
+        System.out.println(solution.findMedianSortedArrays(nums1, nums2));
 
     }
 }
@@ -69,15 +69,24 @@ class Solution {
             // 제일좌측
             if (a < b) {
                 arr[z] = a;
-                i = i + 1;
+                i++;
+                z++;
             } else if (a > b) {
                 arr[z] = b;
-                j = j + 1;
+                j++;
+                z++;
+            } else if (a == b) {
+                i++;
+                j++;
+                arr[z] = a;
+                z++;
+                arr[z] = b;
+                z++;
             }
-
-            z = z + 1;
         }
 
-        return (arr[tSize / 2] + arr[(tSize / 2) - 1]) / 2.0;
+        // rather that using (low+high)/2, use (low+high) >>> 1
+        if (arr.length % 2 != 0) return arr[arr.length / 2];
+        else return (arr[tSize >>> 1] + arr[(tSize >>> 1) - 1]) / 2.0;
     }
 }
